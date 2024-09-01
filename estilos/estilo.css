@@ -70,3 +70,30 @@ header{
 background-color: #f58b00;
 }
 
+@media (max-width: 768px) {
+    /* Mantén el menú horizontal en dispositivos móviles */
+    .ed-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .ed-menu > li {
+        display: inline-block;
+    }
+
+    /* Submenú vertical */
+    .ed-menu li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .ed-menu li:hover ul {
+        display: block;
+    }
+}
